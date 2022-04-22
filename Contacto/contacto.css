@@ -1,0 +1,131 @@
+:root{/*forma de almacenar variables en css, es un elemento que "no existe"*/
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris:#757575;
+    --grisClaro:#dfe9f3;
+    --fuente-principal: 3.8rem; /*  1rem = 20px*/
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px;
+    font-family:  'Krub', sans-serif;
+    background-image:linear-gradient(to top, var(--grisClaro), 40%, var(--blanco) 100%);
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+/**ELEMENTOS HEADING TODAS LAS PAGINAS**/
+.titulo{
+    color: var(--oscuro);
+    text-align: center;
+}
+.titulo span{
+    font-size: 2rem; 
+}
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.nav-princi{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+   .nav-princi{
+       flex-direction:row;
+       justify-content: space-between; 
+       align-items: center;
+   }
+}
+.nav-princi a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+.nav-princi a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+}
+/**RESTO DEL CODIGO**/
+.header{
+    background-image: url(../Contacto/computer.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px; 
+    position: relative; 
+    margin-bottom: 2rem;
+}
+.header-contenido{
+position: absolute;
+background-color: rgba(0, 0, 0, .5);
+width: 100%; /*width es ancho y height es alto*/
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.titulo-contacto{
+    color: #ffc107;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+}
+@media (min-width: 768px) {
+    .titulo-contacto{
+        color: #ffc107;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+    }
+}
+.red-social{
+    line-height: 1; /*interlineado*/
+    text-align: center;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.caja{
+    max-width: 200rem;
+    margin:0 auto;
+    padding: 2rem;
+    box-shadow: 0px 6px 5px 1px rgba(0,0,0,0.36);
+    background-color: var(--blanco);
+    border-radius: 1rem;
+}
+.parrafo-interior{
+    text-align: center;    
+}
+/**MEDIA QUERYS**/
+@media (min-width: 768px) {
+    .redes{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+}
+@media (max-width: 480px) {
+   .titulo-redes{
+       font-size: 2.8rem;
+   }
+}

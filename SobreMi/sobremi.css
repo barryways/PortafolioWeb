@@ -1,0 +1,136 @@
+:root{/*forma de almacenar variables en css, es un elemento que "no existe"*/
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris:#757575;
+    --grisClaro:#dfe9f3;
+    --fuente-principal: 3.8rem; /*  1rem = 20px*/
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px;
+    font-family:  'Krub', sans-serif;
+    background-image:linear-gradient(to top, var(--grisClaro), 40%, var(--blanco) 100%);
+}
+/**ELEMENTOS HEADING TODAS LAS PAGINAS**/
+.titulo{
+    color: var(--oscuro);
+    text-align: center;
+}
+.titulo span{
+    font-size: 2rem; 
+}
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.nav-princi{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+   .nav-princi{
+       flex-direction:row;
+       justify-content: space-between; 
+       align-items: center;
+   }
+}
+.nav-princi a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+.nav-princi a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+}
+/*SEPARACION DE CONTENIDO DE ANTES Y AHORA**/
+.main{
+    background-color: var(--grisClaro);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/**PARTE IZQUIERDA**/
+.campo{
+    background-color: var(--blanco);
+    margin: 1rem;
+}
+.campo h2{
+    text-align: center;
+}
+.iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.icono{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--primario);
+    border-radius: 50%;
+    padding: .5rem;
+}
+@media (min-width: 1140px) {
+.separacion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+}
+.campo{
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.separacion{
+    padding: 2rem;
+}
+/**CONTENIDO PARTE DERECHA **/
+.imagen{
+    display: flex;
+    background-size: auto;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.computer{
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+@media (max-width: 480px) {
+    .computer{
+        height: 400px;
+}
+}
+
+@media (min-width: 768px) {
+    .computer{
+        height: 500px;
+}
+}
+@media (min-width: 1140px) {
+   .computer{
+       height: fit-content;
+   }
+}
+/**FOOTER**/
+.footer{
+    text-align: center;
+}
+.parrafo-interior{
+    text-align: justify;
+}

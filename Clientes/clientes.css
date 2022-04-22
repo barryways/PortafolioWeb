@@ -1,0 +1,100 @@
+:root{/*forma de almacenar variables en css, es un elemento que "no existe"*/
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris:#757575;
+    --grisClaro:#dfe9f3;
+    --fuente-principal: 3.8rem; /*  1rem = 20px*/
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px;
+    font-family:  'Krub', sans-serif;
+    background-image:linear-gradient(to top, var(--grisClaro), 40%, var(--blanco) 100%);
+}
+/**ELEMENTOS HEADING TODAS LAS PAGINAS**/
+.titulo{
+    color: var(--oscuro);
+    text-align: center;
+}
+.titulo span{
+    font-size: 2rem; 
+}
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.nav-princi{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+   .nav-princi{
+       flex-direction:row;
+       justify-content: space-between; 
+       align-items: center;
+   }
+}
+.nav-princi a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+.nav-princi a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+}
+/**RESTO DEL CODIGO**/
+.header{
+    background-image: url(../Clientes/typing-849806_960_720.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px; 
+    position: relative; 
+    margin-bottom: 2rem;
+}
+.header-contenido{
+position: absolute;
+background-color: rgba(0, 0, 0, .5);
+width: 100%; /*width es ancho y height es alto*/
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.titulo-header{
+    color: var(--primario);
+    font-size: 4.5rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+@media (max-width: 480px) {
+   .titulo-header{
+       font-size: 3.5rem;
+   }
+}
+.parrafo-interior{
+    text-align: center;
+    font-size: 400;
+    background-color: var(--secundario);
+    padding: 3rem;
+}
+.footer{
+    text-align: center;
+}
